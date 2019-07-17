@@ -22,7 +22,6 @@ uint64_t tick = 0;
 uint64_t switch_tick = 0;
 int frames = 0;
 int fps = 0;
-long i=0;
 long previousitime=0;
 long currenttime=0;
 int mode = INTEGER_FPS;
@@ -57,8 +56,6 @@ int sceDisplaySetFrameBuf_patched(const SceDisplayFrameBuf *pParam, int sync) {
 			}
 			drawStringF(5, 5, "FPS: %d", fps);
 			currenttime = sceKernelGetSystemTimeWide();
-			i++;
-			drawStringF(5, 22, "Frames: %d",i);
 			drawStringF(5, 40, "FrameTime: %d",currenttime-previousitime);
 			previousitime = currenttime;
 		}
