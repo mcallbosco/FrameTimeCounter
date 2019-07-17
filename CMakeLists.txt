@@ -39,6 +39,7 @@ target_link_libraries(Framecounter
   k
   gcc
   ScePower_stub
+  SceKernelThreadMgr_stub
 )
 
 set_target_properties(Framecounter
