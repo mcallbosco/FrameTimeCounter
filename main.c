@@ -62,7 +62,7 @@ int sceDisplaySetFrameBuf_patched(const SceDisplayFrameBuf *pParam, int sync) {
 			
 			currenttime = sceKernelGetSystemTimeWide();
 			if (fps==30){
-				if (currenttime-previousitime-33000>10000){
+				if (currenttime-previousitime-33000>10000){ //10000 is just a guess the smallest amount of time it would take for a frameskip. 1 frame should have 333333 inbetween at 30fps but theres variations that happen every frame, and those seem to fall under 10000
 					setTextColor(0x00FF0000);
 					badframetime++;
 					isred=1;
