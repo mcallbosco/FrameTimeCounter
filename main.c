@@ -61,7 +61,7 @@ int sceDisplaySetFrameBuf_patched(const SceDisplayFrameBuf *pParam, int sync) {
 			//Code for frametime
 			
 			currenttime = sceKernelGetSystemTimeWide();
-			if (fps=30){
+			if (fps==30){
 				if (currenttime-previousitime-33000>10000){
 					setTextColor(0x00FF0000);
 					badframetime++;
