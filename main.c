@@ -70,7 +70,7 @@ int sceDisplaySetFrameBuf_patched(const SceDisplayFrameBuf *pParam, int sync) {
 			}
 			drawStringF(5, 40, "FrameTime: %d",currenttime-previousitime);
 			previousitime = currenttime;
-			if (isred=1) {setTextColor(0x00FFFFFF); isred=0;}
+			if (isred==1) {setTextColor(0x00FFFFFF); isred=0;}
 			drawStringF(5, 22, "Bad FT amount: %d",badframetime);
 		}
 		frames++;
